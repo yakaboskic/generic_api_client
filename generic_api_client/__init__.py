@@ -11,7 +11,7 @@ from .mixins.generic import GenericClientMixin
 COMMON_ALIASES = {}
 
 # API specific aliases
-GENERICAPI_ALIAS/S = copy(COMMON_ALIASES)
+GENERICAPI_ALIASES = copy(COMMON_ALIASES)
 GENERICAPI_ALIASES.update({
     "_endpoint": 'endpoint'
 })
