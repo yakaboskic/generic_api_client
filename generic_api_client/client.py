@@ -18,10 +18,6 @@ __version__ = '0.0.1'
 
 logger = logging.getLogger(__name__)
 
-class FoodResult:
-    def __init__(self):
-        pass
-
 class BaseClient:
     """
     The base client for the an API web service.
@@ -47,7 +43,7 @@ class BaseClient:
         ret = res.json()
         return from_cache, ret
 
-    def _endpoint(self, q, **kwargs):
+    def _internal_fn(self, q, **kwargs):
         """ Return the query result.
         This is the wrapper for the POST query of a API web service.
 

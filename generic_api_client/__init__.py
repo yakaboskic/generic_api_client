@@ -13,7 +13,7 @@ COMMON_ALIASES = {}
 # API specific aliases
 GENERICAPI_ALIAS/S = copy(COMMON_ALIASES)
 GENERICAPI_ALIASES.update({
-    "_endpoint": 'endpoint'
+    "_internal_fn": 'external_fn'
 })
 
 # Kwargs
@@ -28,7 +28,7 @@ GENERICAPI_KWARGS.update({
     "_default_url": 'https://api.generic.com/api/',
 })
 
-# Edemam client settings
+# Generic client settings
 CLIENT_SETTINGS = {
     "generic": {
         "class_name": 'GenericApiClient',
@@ -72,5 +72,5 @@ def get_client(api=None, instance=True, *args, **kwargs):
     _client = _class(*args, **kwargs) if instance else _class
     return _client
 
-class GenericApiClient(get_client('food', instance=False)):
+class GenericApiClient(get_client('generic', instance=False)):
     pass
